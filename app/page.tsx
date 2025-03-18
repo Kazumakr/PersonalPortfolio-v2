@@ -258,7 +258,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 size="lg"
-                className="rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-sm border-[#2D7CF6]/20"
+                className="rounded-lg bg-black/50 hover:bg-black/70 backdrop-blur-md border-white/30 text-white shadow-md"
                 onClick={() => scrollToSection(contactRef)}
               >
                 Contact Me
@@ -271,7 +271,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer"
+          className="absolute bottom-8 left-0 right-0 mx-auto w-8 flex justify-center animate-bounce cursor-pointer"
           onClick={() => scrollToSection(aboutRef)}
         >
           <ChevronDown className="w-8 h-8" />
@@ -355,11 +355,12 @@ export default function Home() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="currentColor"
                     viewBox="0 0 24 24"
+                    className="h-5 w-5 text-white"
+                    fill="currentColor"
+                    preserveAspectRatio="xMidYMid meet"
                   >
-                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                    <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
                   </svg>
                 </a>
               </div>
@@ -406,8 +407,9 @@ export default function Home() {
                         className="h-4 w-4 text-white"
                         fill="currentColor"
                         viewBox="0 0 24 24"
+                        preserveAspectRatio="xMidYMid meet"
                       >
-                        <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                        <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
                       </svg>
                     </div>
                     <a
@@ -416,7 +418,10 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="text-gray-300 hover:text-[#2D7CF6] transition-colors"
                     >
-                      linkedin.com/in/kazumakuramoto
+                      <span className="hidden lg:inline">
+                        linkedin.com/in/kazumakuramoto
+                      </span>
+                      <span className="inline lg:hidden">/kazumakuramoto</span>
                     </a>
                   </li>
                   <li className="flex items-center gap-3">
@@ -504,6 +509,9 @@ export default function Home() {
                 icon: Code,
                 title: "Languages",
                 skills: ["JavaScript", "TypeScript", "PHP", "HTML", "CSS"],
+                color: "from-blue-500/20 to-blue-700/20",
+                iconBg: "bg-blue-500/20",
+                hoverBorder: "hover:border-blue-500/50",
               },
               {
                 icon: Terminal,
@@ -524,6 +532,9 @@ export default function Home() {
                   "Stripe",
                   "PayPal",
                 ],
+                color: "from-purple-500/20 to-pink-600/20",
+                iconBg: "bg-purple-500/20",
+                hoverBorder: "hover:border-purple-500/50",
               },
               {
                 icon: Sparkles,
@@ -541,16 +552,29 @@ export default function Home() {
                   "Git",
                   "SourceTree",
                 ],
+                color: "from-green-500/20 to-teal-600/20",
+                iconBg: "bg-green-500/20",
+                hoverBorder: "hover:border-green-500/50",
               },
             ].map((feature, index) => (
               <motion.div
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                className="card-gradient rounded-xl p-6 border border-white/10 hover:border-primary/50 transition-all duration-300 group"
+                className={`card-gradient rounded-xl p-6 border border-white/10 ${feature.hoverBorder} transition-all duration-300 group bg-gradient-to-br ${feature.color}`}
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
-                  <feature.icon className="w-6 h-6 text-primary" />
+                <div
+                  className={`w-12 h-12 rounded-lg ${feature.iconBg} flex items-center justify-center mb-4 group-hover:bg-opacity-40 transition-colors`}
+                >
+                  <feature.icon
+                    className={`w-6 h-6 ${
+                      feature.iconBg.includes("blue")
+                        ? "text-blue-500"
+                        : feature.iconBg.includes("purple")
+                        ? "text-purple-500"
+                        : "text-green-500"
+                    }`}
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
                 <div className="flex flex-wrap gap-2">
@@ -774,8 +798,9 @@ export default function Home() {
                       className="h-5 w-5 text-white"
                       fill="currentColor"
                       viewBox="0 0 24 24"
+                      preserveAspectRatio="xMidYMid meet"
                     >
-                      <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
                     </svg>
                   </div>
                   <a
@@ -784,7 +809,10 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#2D7CF6] transition-colors"
                   >
-                    linkedin.com/in/kazumakuramoto
+                    <span className="hidden md:inline">
+                      linkedin.com/in/kazumakuramoto
+                    </span>
+                    <span className="inline md:hidden">/kazumakuramoto</span>
                   </a>
                 </div>
               </div>
@@ -850,8 +878,9 @@ export default function Home() {
                       className="h-8 w-8"
                       fill="currentColor"
                       viewBox="0 0 24 24"
+                      preserveAspectRatio="xMidYMid meet"
                     >
-                      <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                      <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
                     </svg>
                   </a>
                 </div>
@@ -920,8 +949,9 @@ export default function Home() {
                 className="h-5 w-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
+                preserveAspectRatio="xMidYMid meet"
               >
-                <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
               </svg>
             </Link>
           </div>
