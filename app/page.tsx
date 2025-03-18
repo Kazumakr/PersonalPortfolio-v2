@@ -498,10 +498,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            variants={staggerContainer}
-          >
+          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: Code,
