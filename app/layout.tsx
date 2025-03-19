@@ -14,8 +14,15 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Modern Portfolio | Cursor-like UI",
-  description: "A modern portfolio with a Cursor-like rich UI experience",
+  title: "Kazuma Kuramoto | Full-Stack Developer",
+  description:
+    "Portfolio website of Kazuma Kuramoto, a Full-Stack Developer specializing in modern web technologies and applications.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export default function RootLayout({
