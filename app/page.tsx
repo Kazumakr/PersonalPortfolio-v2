@@ -193,6 +193,7 @@ export default function Home() {
   const socialLinks = {
     github: "https://github.com/Kazumakr",
     linkedin: "https://linkedin.com/in/kazumakuramoto",
+    medium: "https://medium.com/@kazumajs",
     email: "kazumakuramoto.jp@gmail.com",
   };
 
@@ -363,6 +364,22 @@ export default function Home() {
                     <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
                   </svg>
                 </a>
+                <a
+                  href={socialLinks.medium}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="h-5 w-5 text-white"
+                    fill="currentColor"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <path d="M4.285 7.269a.733.733 0 0 0-.24-.619l-1.77-2.133v-.32h5.498l4.25 9.32 3.736-9.32h5.24v.319l-1.514 1.451a.45.45 0 0 0-.168.425v10.666a.448.448 0 0 0 .168.425l1.478 1.451v.319h-7.436v-.319l1.53-1.486c.15-.15.15-.194.15-.425V8.401L10.95 19.218h-.57L5.47 8.401v7.249c-.041.305.06.612.275.833l2.001 2.427v.319H2.36v-.319l2.001-2.427a.965.965 0 0 0 .256-.833V7.269z" />
+                  </svg>
+                </a>
               </div>
             </motion.div>
 
@@ -422,6 +439,30 @@ export default function Home() {
                         linkedin.com/in/kazumakuramoto
                       </span>
                       <span className="inline lg:hidden">/kazumakuramoto</span>
+                    </a>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#2D7CF6] to-[#BF5AF2] flex items-center justify-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        preserveAspectRatio="xMidYMid meet"
+                      >
+                        <path d="M4.285 7.269a.733.733 0 0 0-.24-.619l-1.77-2.133v-.32h5.498l4.25 9.32 3.736-9.32h5.24v.319l-1.514 1.451a.45.45 0 0 0-.168.425v10.666a.448.448 0 0 0 .168.425l1.478 1.451v.319h-7.436v-.319l1.53-1.486c.15-.15.15-.194.15-.425V8.401L10.95 19.218h-.57L5.47 8.401v7.249c-.041.305.06.612.275.833l2.001 2.427v.319H2.36v-.319l2.001-2.427a.965.965 0 0 0 .256-.833V7.269z" />
+                      </svg>
+                    </div>
+                    <a
+                      href={socialLinks.medium}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-300 hover:text-[#2D7CF6] transition-colors"
+                    >
+                      <span className="hidden lg:inline">
+                        medium.com/@kazumajs
+                      </span>
+                      <span className="inline lg:hidden">@kazumajs</span>
                     </a>
                   </li>
                   <li className="flex items-center gap-3">
@@ -815,6 +856,31 @@ export default function Home() {
                     <span className="inline md:hidden">/kazumakuramoto</span>
                   </a>
                 </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2D7CF6] to-[#BF5AF2] flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      preserveAspectRatio="xMidYMid meet"
+                    >
+                      <path d="M4.285 7.269a.733.733 0 0 0-.24-.619l-1.77-2.133v-.32h5.498l4.25 9.32 3.736-9.32h5.24v.319l-1.514 1.451a.45.45 0 0 0-.168.425v10.666a.448.448 0 0 0 .168.425l1.478 1.451v.319h-7.436v-.319l1.53-1.486c.15-.15.15-.194.15-.425V8.401L10.95 19.218h-.57L5.47 8.401v7.249c-.041.305.06.612.275.833l2.001 2.427v.319H2.36v-.319l2.001-2.427a.965.965 0 0 0 .256-.833V7.269z" />
+                    </svg>
+                  </div>
+                  <a
+                    href={socialLinks.medium}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-[#2D7CF6] transition-colors"
+                  >
+                    <span className="hidden md:inline">
+                      medium.com/@kazumajs
+                    </span>
+                    <span className="inline md:hidden">@kazumajs</span>
+                  </a>
+                </div>
               </div>
             </motion.div>
 
@@ -883,6 +949,22 @@ export default function Home() {
                       <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
                     </svg>
                   </a>
+                  <Link
+                    href={socialLinks.medium}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-8 w-8"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      preserveAspectRatio="xMidYMid meet"
+                    >
+                      <path d="M4.285 7.269a.733.733 0 0 0-.24-.619l-1.77-2.133v-.32h5.498l4.25 9.32 3.736-9.32h5.24v.319l-1.514 1.451a.45.45 0 0 0-.168.425v10.666a.448.448 0 0 0 .168.425l1.478 1.451v.319h-7.436v-.319l1.53-1.486c.15-.15.15-.194.15-.425V8.401L10.95 19.218h-.57L5.47 8.401v7.249c-.041.305.06.612.275.833l2.001 2.427v.319H2.36v-.319l2.001-2.427a.965.965 0 0 0 .256-.833V7.269z" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -952,6 +1034,22 @@ export default function Home() {
                 preserveAspectRatio="xMidYMid meet"
               >
                 <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+              </svg>
+            </Link>
+            <Link
+              href={socialLinks.medium}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <path d="M4.285 7.269a.733.733 0 0 0-.24-.619l-1.77-2.133v-.32h5.498l4.25 9.32 3.736-9.32h5.24v.319l-1.514 1.451a.45.45 0 0 0-.168.425v10.666a.448.448 0 0 0 .168.425l1.478 1.451v.319h-7.436v-.319l1.53-1.486c.15-.15.15-.194.15-.425V8.401L10.95 19.218h-.57L5.47 8.401v7.249c-.041.305.06.612.275.833l2.001 2.427v.319H2.36v-.319l2.001-2.427a.965.965 0 0 0 .256-.833V7.269z" />
               </svg>
             </Link>
           </div>

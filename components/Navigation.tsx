@@ -11,6 +11,7 @@ import dynamic from "next/dynamic";
 const socialLinks = {
   github: "https://github.com/Kazumakr",
   linkedin: "https://linkedin.com/in/kazumakuramoto",
+  medium: "https://medium.com/@kazumajs",
 };
 
 // インターフェース定義
@@ -163,6 +164,21 @@ const ClientNavigation = ({
           {[
             { icon: Github, href: socialLinks.github },
             { icon: Linkedin, href: socialLinks.linkedin },
+            {
+              icon: () => (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path d="M4.285 7.269a.733.733 0 0 0-.24-.619l-1.77-2.133v-.32h5.498l4.25 9.32 3.736-9.32h5.24v.319l-1.514 1.451a.45.45 0 0 0-.168.425v10.666a.448.448 0 0 0 .168.425l1.478 1.451v.319h-7.436v-.319l1.53-1.486c.15-.15.15-.194.15-.425V8.401L10.95 19.218h-.57L5.47 8.401v7.249c-.041.305.06.612.275.833l2.001 2.427v.319H2.36v-.319l2.001-2.427a.965.965 0 0 0 .256-.833V7.269z" />
+                </svg>
+              ),
+              href: socialLinks.medium,
+            },
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -172,6 +188,8 @@ const ClientNavigation = ({
               <Link
                 href={item.href}
                 className="text-gray-400 hover:text-white transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <item.icon className="w-5 h-5" />
               </Link>
@@ -260,6 +278,21 @@ const ClientNavigation = ({
               {[
                 { icon: Github, href: socialLinks.github },
                 { icon: Linkedin, href: socialLinks.linkedin },
+                {
+                  icon: () => (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path d="M4.285 7.269a.733.733 0 0 0-.24-.619l-1.77-2.133v-.32h5.498l4.25 9.32 3.736-9.32h5.24v.319l-1.514 1.451a.45.45 0 0 0-.168.425v10.666a.448.448 0 0 0 .168.425l1.478 1.451v.319h-7.436v-.319l1.53-1.486c.15-.15.15-.194.15-.425V8.401L10.95 19.218h-.57L5.47 8.401v7.249c-.041.305.06.612.275.833l2.001 2.427v.319H2.36v-.319l2.001-2.427a.965.965 0 0 0 .256-.833V7.269z" />
+                    </svg>
+                  ),
+                  href: socialLinks.medium,
+                },
               ].map((item, index) => (
                 <Button
                   key={index}
