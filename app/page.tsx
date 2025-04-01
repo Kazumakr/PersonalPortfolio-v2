@@ -163,7 +163,6 @@ export default function Home() {
         "react-native-iap",
       ],
       color: "from-orange-500/30 to-red-500/30",
-      link: "https://apps.apple.com/us/app/peaceful-world-music/id1531033141",
       period: "Apr 2023 – May 2023",
     },
   ];
@@ -591,6 +590,7 @@ export default function Home() {
                   "AWS Lambda",
                   "AWS RDS",
                   "Git",
+                  "GitHub Actions",
                   "SourceTree",
                 ],
                 color: "from-green-500/20 to-teal-600/20",
@@ -690,7 +690,9 @@ export default function Home() {
                     transition: { duration: 0.3 },
                   }}
                   className={`card-gradient rounded-xl overflow-hidden border border-white/10 group h-full flex flex-col ${
-                    project.link ? "cursor-pointer" : "opacity-90"
+                    project.link
+                      ? "cursor-pointer"
+                      : "cursor-not-allowed opacity-90"
                   }`}
                   onClick={() =>
                     project.link &&
